@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora redação</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora</h1>
+    </header>
+
+    <main>
+      <section>
+        <label for="name">Nome do aluno</label>
+        <input type="text" placeholder="Digite aqui..." id="name" required />
+        <div id="studentCountDisplay"></div>
+        <button type="button" id="toggleCorrection"></button>
+      </section>
+
+      <hr />
+      <form id="formComp">
+        <section>
+          <h1>Nota total: <span id="studentGrade"></span></h1>
+          <h2>Competência 1:</h2>
+          <p>Demonstrar domínio da norma padrão da língua portuguesa</p>
+          <div class="selectComp">
+            <div>
+              <input type="radio" name="comp1" value="0" />
+              <label for="comp1">0</label>
+            </div>
+            <div>
+              <input type="radio" name="comp1" value="200" />
+              <label for="comp1">200</label>
+            </div>
+            <div>
+              <input type="radio" name="comp1" value="400" />
+              <label for="comp1">400</label>
+            </div>
+            <div>
+              <input type="radio" name="comp1" value="600" />
+              <label for="comp1">600</label>
+            </div>
+            <div>
+              <input type="radio" name="comp1" value="800" />
+              <label for="comp1">800</label>
+            </div>
+            <div>
+              <input type="radio" name="comp1" value="1000" />
+              <label for="comp1">1000</label>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Competência 2:</h2>
+          <p>Compreender a proposta de redação e aplicar conceitos das várias áreas de conhecimento para desenvolver o tema, dentro dos limites estruturais do texto dissertativo-argumentativo em prosa.</p>
+          <div class="selectComp">
+            <div>
+              <input type="radio" name="comp2" value="0" />
+              <label for="comp2">0</label>
+            </div>
+            <div>
+              <input type="radio" name="comp2" value="200" />
+              <label for="comp2">200</label>
+            </div>
+            <div>
+              <input type="radio" name="comp2" value="400" />
+              <label for="comp2">400</label>
+            </div>
+            <div>
+              <input type="radio" name="comp2" value="600" />
+              <label for="comp2">600</label>
+            </div>
+            <div>
+              <input type="radio" name="comp2" value="800" />
+              <label for="comp2">800</label>
+            </div>
+            <div>
+              <input type="radio" name="comp2" value="1000" />
+              <label for="comp2">1000</label>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Competência 3:</h2>
+          <p>Selecionar, relacionar, organizar e interpretar informações, fatos, opiniões e argumentos em defesa de um ponto de vista.</p>
+          <div class="selectComp">
+            <div>
+              <input type="radio" name="comp3" value="0" />
+              <label for="comp3">0</label>
+            </div>
+            <div>
+              <input type="radio" name="comp3" value="200" />
+              <label for="comp3">200</label>
+            </div>
+            <div>
+              <input type="radio" name="comp3" value="400" />
+              <label for="comp3">400</label>
+            </div>
+            <div>
+              <input type="radio" name="comp3" value="600" />
+              <label for="comp3">600</label>
+            </div>
+            <div>
+              <input type="radio" name="comp3" value="800" />
+              <label for="comp3">800</label>
+            </div>
+            <div>
+              <input type="radio" name="comp3" value="1000" />
+              <label for="comp3">1000</label>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Competência 4:</h2>
+          <p>Demonstrar conhecimento dos mecanismos linguísticos necessários para a construção da argumentação.</p>
+
+          <div class="selectComp">
+            <div>
+              <input type="radio" name="comp4" value="0" />
+              <label for="comp4">0</label>
+            </div>
+            <div>
+              <input type="radio" name="comp4" value="200" />
+              <label for="comp4">200</label>
+            </div>
+            <div>
+              <input type="radio" name="comp4" value="400" />
+              <label for="comp4">400</label>
+            </div>
+            <div>
+              <input type="radio" name="comp4" value="600" />
+              <label for="comp4">600</label>
+            </div>
+            <div>
+              <input type="radio" name="comp4" value="800" />
+              <label for="comp4">800</label>
+            </div>
+            <div>
+              <input type="radio" name="comp4" value="1000" />
+              <label for="comp4">1000</label>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Competência 5:</h2>
+          <p>Demonstrar domínio da norma padrão da língua portuguesa</p>
+          <div class="selectComp">
+            <div>
+              <input type="radio" name="comp5" value="0" />
+              <label for="comp5">0</label>
+            </div>
+            <div>
+              <input type="radio" name="comp5" value="200" />
+              <label for="comp5">200</label>
+            </div>
+            <div>
+              <input type="radio" name="comp5" value="400" />
+              <label for="comp5">400</label>
+            </div>
+            <div>
+              <input type="radio" name="comp5" value="600" />
+              <label for="comp5">600</label>
+            </div>
+            <div>
+              <input type="radio" name="comp5" value="800" />
+              <label for="comp5">800</label>
+            </div>
+            <div>
+              <input type="radio" name="comp5" value="1000" />
+              <label for="comp5">1000</label>
+            </div>
+          </div>
+        </section>
+
+      <button
+        type="submit"
+        onclick="return alert('Você deseja mesmo enviar uma nota?')"
+      >
+        Enviar
+      </button>
+    </form>
+    <script src="./formHandler.js"></script>
+  </body>
+</html>
