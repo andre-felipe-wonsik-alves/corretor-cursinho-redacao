@@ -106,8 +106,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateStudentGrade() {
-    let total = 0;
-    let count = 0;
+    const name = document.getElementById("name").value; //copiei e colei essa parte de uma função anterior, tá errado aqui.
+    //mas se a ideia tá certa, esse "get" dos valores das comps podia ser uma variável global, né? (Ana)
+
+    const comp1 = document.querySelector('input[name="comp1"]:checked').value;
+    const comp2 = document.querySelector('input[name="comp2"]:checked').value;
+    const comp3 = document.querySelector('input[name="comp3"]:checked').value;
+    const comp4 = document.querySelector('input[name="comp4"]:checked').value;
+    const comp5 = document.querySelector('input[name="comp5"]:checked').value;
+
+    let grade = comp1 + comp2 + comp3 + comp4 + comp5; //a nota final é a soma das notas nas competências
 
     compInputs.forEach((input) => {
       if (input.checked) {
@@ -116,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    const grade = count > 0 ? total / count : 0;
     document.getElementById("studentGrade").innerText = `${grade}`;
   }
 });
