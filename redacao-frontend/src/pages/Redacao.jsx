@@ -13,7 +13,7 @@ const competencias = [
 
 export default function Redacao() {
   const [texto, setTexto] = useState("");
-  const [notas, setNotas] = useState<number[] | null>(null);
+  const [notas, setNotas] = useState(null);
 
   function enviarRedacao() {
     // Aqui futuramente vamos enviar pro backend
