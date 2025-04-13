@@ -3,6 +3,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+import { ModeToggle } from "@/components/mode-toggle";
+
 const competencias = [
   "Competência 1",
   "Competência 2",
@@ -16,8 +18,7 @@ export default function Redacao() {
   const [notas, setNotas] = useState(null);
 
   function enviarRedacao() {
-    // Aqui futuramente vamos enviar pro backend
-    // Por enquanto simula notas aleatórias de 0 a 200
+
     const notasFalsas = Array.from({ length: 5 }, () =>
       Math.floor(Math.random() * 201)
     );
@@ -26,18 +27,15 @@ export default function Redacao() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto space-y-6">
+      <div className="flex justify-end">
+        <ModeToggle />
+      </div>
       <Card>
         <CardHeader>
           <CardTitle>Redação do ENEM</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <Textarea
-            placeholder="Digite ou cole sua redação aqui..."
-            className="h-60"
-            value={texto}
-            onChange={(e) => setTexto(e.target.value)}
-          />
-          <Button onClick={enviarRedacao}>Enviar redação</Button>
+
         </CardContent>
       </Card>
 
