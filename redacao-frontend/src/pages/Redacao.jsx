@@ -9,6 +9,7 @@ import { DataTable } from "@/components/data-table";
 import { columns } from "@/components/columns.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import supabase from '../lib/supabaseClient.js'
 
 export default function Redacao() {
   const [alunos, setAlunos] = useState([]);
@@ -19,9 +20,27 @@ export default function Redacao() {
   const [indiceSlideAtual, setIndiceSlideAtual] = useState(0);
   const [respostas, setRespostas] = useState(["", "", "", "", ""]);
 
+  // useEffect(() => {
+  //   const dadosSalvos = JSON.parse(localStorage.getItem("correcoes")) || [];
+  //   setAlunos(dadosSalvos);
+  // }, []);
+
   useEffect(() => {
-    const dadosSalvos = JSON.parse(localStorage.getItem("correcoes")) || [];
-    setAlunos(dadosSalvos);
+    async function fetchAlunos() {
+
+      let { data: Alunos, error } = await supabase
+        .from('Alunos')
+        .select('*')
+
+      console.log(Alunos);
+      if (error) {
+        console.error('Erro ao buscar alunos:', error);
+      } else {
+        setAlunos(Alunos);
+      }
+    }
+
+    fetchAlunos();
   }, []);
 
   useEffect(() => {
